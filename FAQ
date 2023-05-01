@@ -1,0 +1,42 @@
+-- FAQ --
+
+
+-- GENERAL --
+
+Q: What IDE should I use for Minetest?
+
+Visual Studio 2017 or 2019. We haven't run it on later versions (try at your own risk)
+
+Q: How long does setup take?
+
+About 30 mins (if everything goes right)
+
+Q: There are red errors/libraries missing in CMake. Is that a concern?
+
+As long as you can configure then generate without missing any libraries critical for Minetest, you should be fine.
+
+Q: What is the team workflow on Github?
+
+Make your own branch, then make a pull request to merge your branch into Native-Api. Have another teammate review your PR.
+
+
+-- KNOWN COMMON ERRORS --
+
+Q: Missing Jsapi.h -> Redo project (Minetest) settings, double check BUILD_DBJ.obj files
+
+Q: Issue with winnit.h -> change project SDK version (look at WIN 11 addendum for version, or keep going back versions until it runs)
+
+Q: Unresolved external symbol -> Either A) you are missing headers/function definition B) Missing an entry for newly added file in the CmakeLists.txt
+
+Q: Missing random header you didn't add/misc strange erro -> Repair Visual Studio (Search Visual studio installer in Windows)
+
+Note: when you make a new class, the files must be added to the CmakeLists.txt file for Cmake to compile it (this file will likely be in the same
+location of the file you will add (there are multiple Cmakelists.txt files at every hierarchy level
+
+Q: I switched to a new branch do I need to redo the project properties? YES
+
+-- MAKING CLASSES FAQ --
+
+Q: My lua test function output is not expected (random memory address/garbage) -> use ..dump(result) to print lua table output or ..tostring(result)
+
+Q: What do I call my test functions? -> Every test follows a naming scheme to work with the automatic testing framework [lua/native/test_classNAME_functionNAME)
