@@ -1,0 +1,14 @@
+-- Helpful Links --
+
+Server-side API: https://minetest.gitlab.io/minetest/class-reference/
+Client-side API: https://github.com/minetest/minetest/blob/master/doc/client_lua_api.md
+
+Mod Book: https://minetest.org/modbook/
+Minetest Wiki: https://minetest.gitlab.io/minetest/class-reference/
+
+Programming in Lua: https://www.lua.org/pil/contents.html#P4
+C++ Refernece: https://en.cppreference.com/w/cpp
+GIT Tutorial: https://git-scm.com/docs/gittutorial
+
+
+
