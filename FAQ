@@ -37,6 +37,9 @@ Q: I switched to a new branch do I need to redo the project properties? YES
 
 -- MAKING CLASSES FAQ --
 
+Q: What files do I need to create for my new class? -> native_newClass.cpp, native_newClass.h newClass.lua (test file) also modify the existing C++ and headers to 
+create copies that will call the native functions (i.e "wrapper functions")
+
 Q: My lua test function output is not expected (random memory address/garbage) -> use ..dump(result) to print lua table output or ..tostring(result)
 
 Q: What do I call my test functions? -> Every test follows a naming scheme to work with the automatic testing framework [lua/native/test_classNAME_functionNAME)
